@@ -1,0 +1,308 @@
+[
+  {
+    "shipment_id": "LDG-1029",
+    "lane": "TLV\u2192LHR",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-09T18:12:00Z",
+    "days_to_eta": 2,
+    "severity": "high",
+    "reason_code": [
+      "scan_gap",
+      "excess_dwell"
+    ],
+    "scan_gap_hours": 28,
+    "dwell_hours_current": 11.0,
+    "baseline_90pct_hours": 9.8,
+    "external": {
+      "weather_index": 2,
+      "port_congestion": 3
+    },
+    "current_carrier_name": "DHL Express",
+    "owner": "Ops-Linehaul-IL",
+    "last_update_ts": "2025-09-07T10:12:00Z"
+  },
+  {
+    "shipment_id": "LDG-1043",
+    "lane": "JFK\u2192SFO",
+    "stage": "Origin Hub",
+    "eta_planned": "2025-09-08T15:12:00Z",
+    "days_to_eta": 1,
+    "severity": "medium",
+    "reason_code": [
+      "early_stage_near_eta"
+    ],
+    "scan_gap_hours": 6,
+    "dwell_hours_current": 2.5,
+    "baseline_90pct_hours": 8.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "UPS",
+    "owner": "Ops-East",
+    "last_update_ts": "2025-09-07T10:05:00Z"
+  },
+  {
+    "shipment_id": "LDG-1066",
+    "lane": "FRA\u2192TLV",
+    "stage": "Last-Mile",
+    "eta_planned": "2025-09-10T10:12:00Z",
+    "days_to_eta": 3,
+    "severity": "medium",
+    "reason_code": [
+      "scan_gap"
+    ],
+    "scan_gap_hours": 16,
+    "dwell_hours_current": 4.0,
+    "baseline_90pct_hours": 9.0,
+    "external": {
+      "weather_index": 2,
+      "port_congestion": 1
+    },
+    "current_carrier_name": "Israel Post",
+    "owner": "LM-Central",
+    "last_update_ts": "2025-09-07T09:58:00Z"
+  },
+  {
+    "shipment_id": "LDG-1081",
+    "lane": "SEA\u2192YVR",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-10T06:12:00Z",
+    "days_to_eta": 2,
+    "severity": "low",
+    "reason_code": [
+      "external_risk"
+    ],
+    "scan_gap_hours": 3,
+    "dwell_hours_current": 2.0,
+    "baseline_90pct_hours": 7.0,
+    "external": {
+      "weather_index": 4,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "FedEx",
+    "owner": "Ops-PNW",
+    "last_update_ts": "2025-09-07T09:42:00Z"
+  },
+  {
+    "shipment_id": "LDG-1102",
+    "lane": "HKG\u2192LAX",
+    "stage": "Customs",
+    "eta_planned": "2025-09-12T16:12:00Z",
+    "days_to_eta": 5,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 5,
+    "dwell_hours_current": 7.5,
+    "baseline_90pct_hours": 10.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 3
+    },
+    "current_carrier_name": "Cathay Cargo",
+    "owner": "Broker-West",
+    "last_update_ts": "2025-09-07T09:10:00Z"
+  },
+  {
+    "shipment_id": "LDG-1117",
+    "lane": "ORD\u2192BOS",
+    "stage": "Last-Mile",
+    "eta_planned": "2025-09-08T12:12:00Z",
+    "days_to_eta": 1,
+    "severity": "high",
+    "reason_code": [
+      "excess_dwell"
+    ],
+    "scan_gap_hours": 10,
+    "dwell_hours_current": 19.5,
+    "baseline_90pct_hours": null,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 1
+    },
+    "current_carrier_name": "OnTrac",
+    "owner": "LM-East",
+    "last_update_ts": "2025-09-07T10:02:00Z"
+  },
+  {
+    "shipment_id": "LDG-1125",
+    "lane": "MAD\u2192CDG",
+    "stage": "Destination Hub",
+    "eta_planned": "2025-09-09T13:12:00Z",
+    "days_to_eta": 2,
+    "severity": "medium",
+    "reason_code": [
+      "scan_gap"
+    ],
+    "scan_gap_hours": 27,
+    "dwell_hours_current": 5.0,
+    "baseline_90pct_hours": 7.2,
+    "external": {
+      "weather_index": 2,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "Chronopost",
+    "owner": "Ops-FR",
+    "last_update_ts": "2025-09-07T09:47:00Z"
+  },
+  {
+    "shipment_id": "LDG-1140",
+    "lane": "AMS\u2192FRA",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-11T10:12:00Z",
+    "days_to_eta": 4,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 4,
+    "dwell_hours_current": 3.0,
+    "baseline_90pct_hours": 9.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 1
+    },
+    "current_carrier_name": "DB Schenker",
+    "owner": "Ops-DE",
+    "last_update_ts": "2025-09-07T10:08:00Z"
+  },
+  {
+    "shipment_id": "LDG-1159",
+    "lane": "NRT\u2192SYD",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-13T10:12:00Z",
+    "days_to_eta": 6,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 6,
+    "dwell_hours_current": 4.5,
+    "baseline_90pct_hours": 8.5,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 7
+    },
+    "current_carrier_name": "Qantas Freight",
+    "owner": "Ops-ANZ",
+    "last_update_ts": "2025-09-07T09:54:00Z"
+  },
+  {
+    "shipment_id": "LDG-1173",
+    "lane": "LHR\u2192DUB",
+    "stage": "Origin Pickup",
+    "eta_planned": "2025-09-09T10:12:00Z",
+    "days_to_eta": 2,
+    "severity": "medium",
+    "reason_code": [
+      "early_stage_near_eta"
+    ],
+    "scan_gap_hours": 8,
+    "dwell_hours_current": 1.0,
+    "baseline_90pct_hours": 5.0,
+    "external": {
+      "weather_index": 2,
+      "port_congestion": 1
+    },
+    "current_carrier_name": "DPD",
+    "owner": "Ops-UK",
+    "last_update_ts": "2025-09-07T09:32:00Z"
+  },
+  {
+    "shipment_id": "LDG-1188",
+    "lane": "MIA\u2192JFK",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-09T22:12:00Z",
+    "days_to_eta": 2,
+    "severity": "high",
+    "reason_code": [
+      "external_risk"
+    ],
+    "scan_gap_hours": 5,
+    "dwell_hours_current": 3.5,
+    "baseline_90pct_hours": 8.0,
+    "external": {
+      "weather_index": 5,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "Delta Cargo",
+    "owner": "Ops-East",
+    "last_update_ts": "2025-09-07T10:03:00Z"
+  },
+  {
+    "shipment_id": "LDG-1201",
+    "lane": "SZX\u2192TLV",
+    "stage": "Customs",
+    "eta_planned": "2025-09-10T20:12:00Z",
+    "days_to_eta": 3,
+    "severity": "medium",
+    "reason_code": [
+      "excess_dwell"
+    ],
+    "scan_gap_hours": 7,
+    "dwell_hours_current": 22.0,
+    "baseline_90pct_hours": 18.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "EL AL Cargo",
+    "owner": "Broker-IL",
+    "last_update_ts": "2025-09-07T09:17:00Z"
+  },
+  {
+    "shipment_id": "LDG-1214",
+    "lane": "TLV\u2192AMS",
+    "stage": "Delivered",
+    "eta_planned": "2025-09-06T10:12:00Z",
+    "days_to_eta": -1,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 0,
+    "dwell_hours_current": 0,
+    "baseline_90pct_hours": 6.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 1
+    },
+    "current_carrier_name": "KLM Cargo",
+    "owner": "Ops-NL",
+    "last_update_ts": "2025-09-07T08:12:00Z"
+  },
+  {
+    "shipment_id": "LDG-1227",
+    "lane": "LAX\u2192ORD",
+    "stage": "Destination Hub",
+    "eta_planned": "2025-09-09T16:12:00Z",
+    "days_to_eta": 2,
+    "severity": "medium",
+    "reason_code": [
+      "scan_gap"
+    ],
+    "scan_gap_hours": 25,
+    "dwell_hours_current": 6.5,
+    "baseline_90pct_hours": 9.5,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 2
+    },
+    "current_carrier_name": "USPS",
+    "owner": "Ops-Midwest",
+    "last_update_ts": "2025-09-07T09:50:00Z"
+  },
+  {
+    "shipment_id": "LDG-1245",
+    "lane": "CDG\u2192FCO",
+    "stage": "Last-Mile",
+    "eta_planned": "2025-09-09T02:12:00Z",
+    "days_to_eta": 1,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 6,
+    "dwell_hours_current": 5.0,
+    "baseline_90pct_hours": 12.0,
+    "external": {
+      "weather_index": 1,
+      "port_congestion": 4
+    },
+    "current_carrier_name": "BRT",
+    "owner": "LM-IT",
+    "last_update_ts": "2025-09-07T10:01:00Z"
+  }
+]
