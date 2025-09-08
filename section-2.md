@@ -5,7 +5,7 @@
 A single-screen dashboard showing **at-risk shipments** with search/filters and clear visual indicators.  
 (Embedded screenshot below: main list view with right-side details drawer.)
 
-![Alerts Dashboard — with details drawer](img/alerts-dashboard-drawer.png)
+![Alerts Dashboard — with details drawer](img/Alerts-Dashboard-Drawer.png)
 
 - **Main list view:** severity, shipment/lane, stage, ETA, days→ETA, reason chips, scan gap, dwell, owner, last updated.
 - **Details drawer (on row click):** scan history, node timeline, and suggested next actions (assign owner, ack, expedite, update ETA).
