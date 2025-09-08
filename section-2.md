@@ -7,8 +7,8 @@ A single-screen dashboard showing at-risk shipments with search/filters and clea
 
 [Alerts Dashboard — with details drawer](img/Alerts-Dashboard-Drawer.png)
 
-- **Main list view:** severity, shipment/lane, stage, ETA, days→ETA, reasons, scan gap, dwell, owner.
-- **Details drawer (on row click):** scan history, node timeline, and suggested next actions.
+- **Main list view:** severity, shipment, lane, stage, ETA, Days to ETA, reasons, Scan gap, Dwell.
+- **Details drawer:** top summary row (Lane • Stage • ETA • Updated), then Owner, Scan history, Node timeline, and Next actions (Confirm / Expedite linehaul / Update ETA / Check handoff).
 
 ---
 
@@ -24,37 +24,53 @@ We will use a WebSocket (WSS) channel for near real-time updates (<1–2s).
 
 **Client flow (brief):**
 open `wss://api.logidog/alerts` with auth → initial snapshot → change events messages for inserts/updates/deletes.  
-if WSS is unavailable, fall back to incremental HTTP polling. (Every 10–15s, faster for high-severity, slower for low).
+if WSS is unavailable, fall back to incremental HTTP polling every ~30s.
 
 ---
 
 ## 2.3 Data Structure for Display (denormalized) — example
 
-The dashboard consumes a denormalized row per shipment (all timestamps are UTC/ISO-8601).
+The dashboard consumes a denormalized row per shipment (under "shipment"). All timestamps are UTC/ISO-8601.
 severity is derived from Section 1 thresholds and can be tuned per lane/facility.
 
 ```json
 {
-  "shipment_id": "LDG-1029",
-  "lane": "TLV→LHR",
-  "origin_iata": "TLV",
-  "destination_iata": "LHR",
-  "origin_country": "IL",
-  "destination_country": "GB",
-  "stage": "Linehaul",
-  "eta_planned": "2025-09-09T18:12:00Z",
-  "days_to_eta": 2,
-  "severity": "high",
-  "reason_code": ["scan_gap", "excess_dwell"],
-  "scan_gap_hours": 28,
-  "dwell_hours_current": 11.0,
-  "baseline_90pct_hours": 9.8,
-  "external": {
-    "weather_index": 2,
-    "port_congestion": 3
+  "shipment": {
+    "shipment_id": "LDG-1029",
+    "lane": "TLV→LHR",
+    "origin_iata": "TLV",
+    "destination_iata": "LHR",
+    "origin_country": "IL",
+    "destination_country": "GB",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-09T18:12:00Z",
+    "days_to_eta": 2,
+    "severity": "high",
+    "reason_code": ["scan_gap", "excess_dwell"],
+    "scan_gap_hours": 28,
+    "dwell_hours_current": 11.0,
+    "baseline_90pct_hours": 9.8,
+    "external": { "weather_index": 2, "port_congestion": 3 },
+    "current_carrier_name": "DHL Express",
+    "owner": "Ops-Linehaul-IL",
+    "last_update_timestamp": "2025-09-07T10:12:00Z"
   },
-  "current_carrier_name": "DHL Express",
-  "owner": "Ops-Linehaul-IL",
-  "last_update_ts": "2025-09-07T10:12:00Z"
+  "scan_history": [
+    {
+      "timestamp": "2025-09-06T06:05:00Z",
+      "event": "Departed Origin Facility"
+    },
+    {
+      "timestamp": "2025-09-05T22:31:00Z",
+      "event": "Arrived at Origin Facility"
+    }
+  ],
+  "node_timeline": [
+    { "node": "Origin Pickup", "status": "Completed" },
+    { "node": "Origin Hub", "status": "In progress" },
+    { "node": "Linehaul", "status": "In progress" },
+    { "node": "Destination Hub", "status": "Pending" },
+    { "node": "Last-Mile", "status": "Pending" }
+  ]
 }
 ```

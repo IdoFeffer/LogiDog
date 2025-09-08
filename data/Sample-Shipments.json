@@ -1,29 +1,63 @@
 [
   {
-    "shipment_id": "LDG-1029",
-    "lane": "TLV→LHR",
-    "origin_iata": "TLV",
-    "destination_iata": "LHR",
-    "origin_country": "IL",
-    "destination_country": "GB",
-    "stage": "Linehaul",
-    "eta_planned": "2025-09-09T18:12:00Z",
-    "days_to_eta": 2,
-    "severity": "high",
-    "reason_code": [
-      "scan_gap",
-      "excess_dwell"
-    ],
-    "scan_gap_hours": 28,
-    "dwell_hours_current": 11.0,
-    "baseline_90pct_hours": 9.8,
-    "external": {
-      "weather_index": 2,
-      "port_congestion": 3
+    "shipment": {
+      "shipment_id": "LDG-1029",
+      "lane": "TLV→LHR",
+      "origin_iata": "TLV",
+      "destination_iata": "LHR",
+      "origin_country": "IL",
+      "destination_country": "GB",
+      "stage": "Linehaul",
+      "eta_planned": "2025-09-09T18:12:00Z",
+      "days_to_eta": 2,
+      "severity": "high",
+      "reason_code": [
+        "scan_gap",
+        "excess_dwell"
+      ],
+      "scan_gap_hours": 28,
+      "dwell_hours_current": 11.0,
+      "baseline_90pct_hours": 9.8,
+      "external": {
+        "weather_index": 2,
+        "port_congestion": 3
+      },
+      "current_carrier_name": "DHL Express",
+      "owner": "Ops-Linehaul-IL",
+      "last_update_timestamp": "2025-09-07T10:12:00Z"
     },
-    "current_carrier_name": "DHL Express",
-    "owner": "Ops-Linehaul-IL",
-    "last_update_ts": "2025-09-07T10:12:00Z"
+    "scan_history": [
+      {
+        "timestamp": "2025-09-06T06:05:00Z",
+        "event": "Departed Origin Facility"
+      },
+      {
+        "timestamp": "2025-09-05T22:31:00Z",
+        "event": "Arrived at Origin Facility"
+      }
+    ],
+    "node_timeline": [
+      {
+        "node": "Origin Pickup",
+        "status": "Completed"
+      },
+      {
+        "node": "Origin Hub",
+        "status": "In progress"
+      },
+      {
+        "node": "Linehaul",
+        "status": "In progress"
+      },
+      {
+        "node": "Destination Hub",
+        "status": "Pending"
+      },
+      {
+        "node": "Last-Mile",
+        "status": "Pending"
+      }
+    ]
   },
   {
     "shipment_id": "LDG-1043",
@@ -48,7 +82,7 @@
     },
     "current_carrier_name": "UPS",
     "owner": "Ops-East",
-    "last_update_ts": "2025-09-07T10:05:00Z"
+    "last_update_timestamp": "2025-09-07T10:05:00Z"
   },
   {
     "shipment_id": "LDG-1066",
@@ -59,7 +93,7 @@
     "destination_country": "IL",
     "stage": "Last-Mile",
     "eta_planned": "2025-09-10T10:12:00Z",
-    "days_to_eta": 3,
+    "days_to_eta": 5,
     "severity": "medium",
     "reason_code": [
       "scan_gap"
@@ -73,7 +107,7 @@
     },
     "current_carrier_name": "Israel Post",
     "owner": "LM-Central",
-    "last_update_ts": "2025-09-07T09:58:00Z"
+    "last_update_timestamp": "2025-09-07T09:58:00Z"
   },
   {
     "shipment_id": "LDG-1081",
@@ -98,7 +132,7 @@
     },
     "current_carrier_name": "FedEx",
     "owner": "Ops-PNW",
-    "last_update_ts": "2025-09-07T09:42:00Z"
+    "last_update_timestamp": "2025-09-07T09:42:00Z"
   },
   {
     "shipment_id": "LDG-1102",
@@ -121,7 +155,7 @@
     },
     "current_carrier_name": "Cathay Cargo",
     "owner": "Broker-West",
-    "last_update_ts": "2025-09-07T09:10:00Z"
+    "last_update_timestamp": "2025-09-07T09:10:00Z"
   },
   {
     "shipment_id": "LDG-1117",
@@ -146,7 +180,7 @@
     },
     "current_carrier_name": "OnTrac",
     "owner": "LM-East",
-    "last_update_ts": "2025-09-07T10:02:00Z"
+    "last_update_timestamp": "2025-09-07T10:02:00Z"
   },
   {
     "shipment_id": "LDG-1125",
@@ -171,7 +205,7 @@
     },
     "current_carrier_name": "Chronopost",
     "owner": "Ops-FR",
-    "last_update_ts": "2025-09-07T09:47:00Z"
+    "last_update_timestamp": "2025-09-07T09:47:00Z"
   },
   {
     "shipment_id": "LDG-1140",
@@ -194,7 +228,7 @@
     },
     "current_carrier_name": "DB Schenker",
     "owner": "Ops-DE",
-    "last_update_ts": "2025-09-07T10:08:00Z"
+    "last_update_timestamp": "2025-09-07T10:08:00Z"
   },
   {
     "shipment_id": "LDG-1159",
@@ -217,7 +251,7 @@
     },
     "current_carrier_name": "Qantas Freight",
     "owner": "Ops-ANZ",
-    "last_update_ts": "2025-09-07T09:54:00Z"
+    "last_update_timestamp": "2025-09-07T09:54:00Z"
   },
   {
     "shipment_id": "LDG-1173",
@@ -242,7 +276,7 @@
     },
     "current_carrier_name": "DPD",
     "owner": "Ops-UK",
-    "last_update_ts": "2025-09-07T09:32:00Z"
+    "last_update_timestamp": "2025-09-07T09:32:00Z"
   },
   {
     "shipment_id": "LDG-1188",
@@ -267,7 +301,7 @@
     },
     "current_carrier_name": "Delta Cargo",
     "owner": "Ops-East",
-    "last_update_ts": "2025-09-07T10:03:00Z"
+    "last_update_timestamp": "2025-09-07T10:03:00Z"
   },
   {
     "shipment_id": "LDG-1201",
@@ -292,7 +326,7 @@
     },
     "current_carrier_name": "EL AL Cargo",
     "owner": "Broker-IL",
-    "last_update_ts": "2025-09-07T09:17:00Z"
+    "last_update_timestamp": "2025-09-07T09:17:00Z"
   },
   {
     "shipment_id": "LDG-1214",
@@ -315,7 +349,7 @@
     },
     "current_carrier_name": "KLM Cargo",
     "owner": "Ops-NL",
-    "last_update_ts": "2025-09-07T08:12:00Z"
+    "last_update_timestamp": "2025-09-07T08:12:00Z"
   },
   {
     "shipment_id": "LDG-1227",
@@ -340,7 +374,7 @@
     },
     "current_carrier_name": "USPS",
     "owner": "Ops-Midwest",
-    "last_update_ts": "2025-09-07T09:50:00Z"
+    "last_update_timestamp": "2025-09-07T09:50:00Z"
   },
   {
     "shipment_id": "LDG-1245",
@@ -363,6 +397,6 @@
     },
     "current_carrier_name": "BRT",
     "owner": "LM-IT",
-    "last_update_ts": "2025-09-07T10:01:00Z"
+    "last_update_timestamp": "2025-09-07T10:01:00Z"
   }
 ]
