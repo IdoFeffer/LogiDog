@@ -94,11 +94,9 @@
     "stage": "Last-Mile",
     "eta_planned": "2025-09-10T10:12:00Z",
     "days_to_eta": 5,
-    "severity": "medium",
-    "reason_code": [
-      "scan_gap"
-    ],
-    "scan_gap_hours": 16,
+    "severity": "none",
+    "reason_code": [],
+    "scan_gap_hours": 8,
     "dwell_hours_current": 4.0,
     "baseline_90pct_hours": 9.0,
     "external": {
@@ -107,7 +105,7 @@
     },
     "current_carrier_name": "Israel Post",
     "owner": "LM-Central",
-    "last_update_timestamp": "2025-09-07T09:58:00Z"
+    "last_update_timestamp": "2025-09-05T09:58:00Z"
   },
   {
     "shipment_id": "LDG-1081",

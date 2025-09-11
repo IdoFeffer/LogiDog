@@ -28,11 +28,42 @@ if WSS is unavailable, fall back to incremental HTTP polling every ~30s.
 
 ---
 
-## 2.3 Data Structure for Display (denormalized) — example
+## 2.3 Data Structure for Display (Denormalized) — example
 
-The dashboard consumes a denormalized row per shipment (under "shipment"). All timestamps are UTC/ISO-8601.
+**Why:** The dashboard list should render, filter, and sort without joins or extra calls.
+**What:** We return one denormalized row per shipment with all decision fields (e.g., severity, reason_code, ETA, days_to_eta, scan/dwell metrics).
+**Details:** Deep data (e.g., scan_history, node_timeline) is fetched on demand via GET /v1/shipments/{shipment_id} for the Drawer.
+The API does not return “normalized” DB tables.
+All timestamps are UTC / ISO-8601.
 severity is derived from Section 1 thresholds and can be tuned per lane/facility.
 
+**Denormalized:**
+```json
+{
+  "shipment": {
+    "shipment_id": "LDG-1029",
+    "lane": "TLV→LHR",
+    "origin_iata": "TLV",
+    "destination_iata": "LHR",
+    "origin_country": "IL",
+    "destination_country": "GB",
+    "stage": "Linehaul",
+    "eta_planned": "2025-09-09T18:12:00Z",
+    "days_to_eta": 2,
+    "severity": "high",
+    "reason_code": ["scan_gap", "excess_dwell"],
+    "scan_gap_hours": 28,
+    "dwell_hours_current": 11.0,
+    "baseline_90pct_hours": 9.8,
+    "external": { "weather_index": 2, "port_congestion": 3 },
+    "current_carrier_name": "DHL Express",
+    "owner": "Ops-Linehaul-IL",
+    "last_update_timestamp": "2025-09-07T10:12:00Z"
+  }
+}
+```
+
+**Drawer details via GET /v1/shipments/{shipment_id}:** 
 ```json
 {
   "shipment": {
